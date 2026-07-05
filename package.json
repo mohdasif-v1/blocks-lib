@@ -1,28 +1,20 @@
 {
   "name": "@ensinolibre/blocks",
-  "version": "0.1.0",
-  "description": "Reusable worksheet blocks (schema, editor, renderer, grading) consumed by the EnsinoLibre core builder and third parties.",
+  "version": "0.2.0",
+  "description": "EnsinoLibre's reusable teaching-block library: contracts, digital renderers, analog (print) emitters and AI-prompt contracts for every worksheet activity type.",
+  "type": "module",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ensinolibre/blocks.git"
+  "exports": {
+    "./validator": "./src/validator.js",
+    "./renderer": "./src/renderer.js",
+    "./analog": "./src/analog.js",
+    "./prompt-builder": "./src/prompt-builder.js",
+    "./schema": "./schema/worksheet.schema.json"
   },
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"no test runner configured yet\" && exit 0"
-  },
-  "peerDependencies": {
-    "react": "^18",
-    "react-dom": "^18"
+    "test": "node tests/run-tests.mjs"
   },
   "devDependencies": {
-    "@types/react": "^18.2.0",
-    "typescript": "^5.4.0"
+    "ajv": "^8.17.1"
   }
 }
