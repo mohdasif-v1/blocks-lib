@@ -1,0 +1,28 @@
+{
+  "name": "@ensinolibre/blocks",
+  "version": "0.1.0",
+  "description": "Reusable worksheet blocks (schema, editor, renderer, grading) consumed by the EnsinoLibre core builder and third parties.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ensinolibre/blocks.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"no test runner configured yet\" && exit 0"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.4.0"
+  }
+}
